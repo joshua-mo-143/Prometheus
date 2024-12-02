@@ -20,8 +20,9 @@ scrape_configs:
   
   - job_name: 'demo_application'
     scrape_interval: 5s
+    metrics_path: /metrics
     static_configs:
-      - targets: ['demo.do.prometheus.io:9090']
+      - targets: ['perfect-adaptation.railway.internal:8000']
 
   # - job_name: 'postgres'
   #   scrape_interval: 5s
